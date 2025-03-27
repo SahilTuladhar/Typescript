@@ -2,8 +2,6 @@ function Introduction(person : Person){
   console.log(`My Name is ${person.firstName} ${person.lastName} and my age is ${person.age}`);
 }
 
-
-
 interface Person{
     firstName : string,
     lastName? : string,
