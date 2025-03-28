@@ -7,11 +7,11 @@ type  inputProps = {
 
 
 
-const Inputs = (props : inputProps) => {
+const Inputs = ({value , handleChange} : inputProps) => {
    
  return(
     <>
-    <input value={props.value} onChange={(event) => (props.handleChange(event))}/>
+    <input value={value} onChange={(event) => (handleChange(event))}/>
     </>
  )
 }

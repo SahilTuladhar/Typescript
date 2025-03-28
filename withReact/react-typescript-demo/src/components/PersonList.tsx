@@ -1,6 +1,4 @@
-type personListProps = {
-    persons : Array<string>
-}
+import { personListProps } from "./PersonList.types"
 
 const PersonList = (props : personListProps) => {
 
@@ -11,7 +9,7 @@ const PersonList = (props : personListProps) => {
             {
               persons.map((person) => (
                 <div>
-                    <h2>{person}</h2>
+                    <h2>{person.first} {person.last}</h2>
                 </div>
               ))
             }
