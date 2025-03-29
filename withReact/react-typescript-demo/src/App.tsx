@@ -15,6 +15,8 @@ import './App.css';
 import { idText } from 'typescript';
 import React, { useState } from 'react';
 import LoggedIn from './components/state/LoggedIn';
+import Box from './components/context/Box';
+import ThemeContextProvider from './components/context/ThemeContext';
 
 function App() {
 
@@ -73,6 +75,10 @@ function App() {
 
        <TypeAssertion />
        <Counter />
+
+       <ThemeContextProvider> 
+         <Box/>
+       </ThemeContextProvider>
 
     
     </div>
