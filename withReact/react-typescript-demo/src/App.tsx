@@ -7,9 +7,14 @@ import Oscar from './components/Oscar';
 import Button from './components/Button';
 import Inputs from './components/Input';
 import Container from './components/Container';
+import loggedIn from './components/state/LoggedIn';
+import TypeAssertion from './components/state/TypeAssertion';
+import Counter from './components/state/Counter';
+import User from './components/state/User';
 import './App.css';
 import { idText } from 'typescript';
 import React, { useState } from 'react';
+import LoggedIn from './components/state/LoggedIn';
 
 function App() {
 
@@ -43,7 +48,7 @@ function App() {
 
       {/* <Greet isLoggedIn = {false} name = 'Sahil'/> */}
       {/* <Person fullName = {personName}/> */}
-      <PersonList persons = {personList}/>
+      {/* <PersonList persons = {personList}/> */}
 
       {/* <Status status = 'loading' /> 
       <Heading>This is the header Component Child text</Heading>
@@ -55,13 +60,21 @@ function App() {
         
       )}/> */}
 
-      <Inputs value ={input} handleChange={(event) => {
+      {/* <Inputs value ={input} handleChange={(event) => {
         console.log("Input Changed" , event)
         setInput(event.target.value)
-      }}/>
+      }}/> */}
 
-      <Container styles ={containerStyles}/>
-      
+      {/* <Container styles ={containerStyles}/>
+       */}
+
+       {/* <LoggedIn />
+       <User /> */}
+
+       <TypeAssertion />
+       <Counter />
+
+    
     </div>
   );
   
