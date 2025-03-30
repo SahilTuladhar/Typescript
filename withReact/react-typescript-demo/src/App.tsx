@@ -23,6 +23,15 @@ import Users2 from './components/context/Users2';
 import UserContextProvider2 from './components/context/UserContext2';
 import { CounterClass } from './components/class/classComponent';
 import DomRefs from './components/refs/DomRefs';
+import Page from './components/Auth/Page';
+import List from './components/generics/List';
+import Profile from './components/Auth/Profile';
+import RandomNumber from './components/restrictions/RandomNumber';
+
+// export type SetLoginStateProp = {
+//   setIsLoggedIn : React.Dispatch<React.SetStateAction<boolean>>
+// }
+ 
 
 
 function App() {
@@ -31,8 +40,10 @@ function App() {
     first : 'Sahil',
     last: 'Tuladhar'
   }
-   
+
+ 
   const [input , setInput] = useState(' ')
+  const [isLoggedIn , setIsLoggedIn] = useState<boolean>(false)
    
   const personList = [{
     first: 'Bruce',
@@ -98,6 +109,23 @@ function App() {
       <DomRefs/>
 
       <CounterClass message='Hi Please check out my counter'/>
+
+      <Page isLoggedIn={isLoggedIn} setIsLoggedIn = {setIsLoggedIn} component={Profile}/>
+
+       <List 
+       items = {['Sahil' , 'Messi' , 'Saka']}
+        onClick={(item) => console.log(item)
+        }
+       />
+
+<List 
+       items = {[1 , 2, 3]}
+        onClick={(item) => console.log(item)
+        }
+       />
+   <RandomNumber value = {10} isPos/>
+      
+      
        
 
     
