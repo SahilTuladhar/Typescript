@@ -17,6 +17,13 @@ import React, { useState } from 'react';
 import LoggedIn from './components/state/LoggedIn';
 import Box from './components/context/Box';
 import ThemeContextProvider from './components/context/ThemeContext';
+import Users from './components/context/Users';
+import UserContextProvider from './components/context/UserContext';
+import Users2 from './components/context/Users2';
+import UserContextProvider2 from './components/context/UserContext2';
+import { CounterClass } from './components/class/classComponent';
+import DomRefs from './components/refs/DomRefs';
+
 
 function App() {
 
@@ -73,12 +80,25 @@ function App() {
        {/* <LoggedIn />
        <User /> */}
 
-       <TypeAssertion />
+       {/* <TypeAssertion />
        <Counter />
 
        <ThemeContextProvider> 
          <Box/>
-       </ThemeContextProvider>
+       </ThemeContextProvider> */}
+{/* 
+      <UserContextProvider>
+        <Users/>
+      </UserContextProvider> */}
+
+      {/* <UserContextProvider2>
+        <Users2/>
+      </UserContextProvider2> */}
+
+      <DomRefs/>
+
+      <CounterClass message='Hi Please check out my counter'/>
+       
 
     
     </div>
