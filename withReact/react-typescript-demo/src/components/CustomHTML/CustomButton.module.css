@@ -1,0 +1,13 @@
+
+.button-primary{
+ padding: 1rem;
+ background-color: rgb(170, 112, 224);
+ border-radius: 22px;
+}
+
+.button-secondary{
+ padding: 1rem;
+ background-color: rgba(93, 233, 238, 0.863);
+
+ border-radius: 22px;
+}

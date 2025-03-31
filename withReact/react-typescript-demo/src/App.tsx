@@ -25,8 +25,13 @@ import { CounterClass } from './components/class/classComponent';
 import DomRefs from './components/refs/DomRefs';
 import Page from './components/Auth/Page';
 import List from './components/generics/List';
+import Toast from './components/templateliterals/Toast';
+import CustomInput from './components/CustomHTML/CustomInput';
 import Profile from './components/Auth/Profile';
+import Text from './components/polymorphic/Text';
 import RandomNumber from './components/restrictions/RandomNumber';
+import CustomButton from './components/CustomHTML/CustomButton';
+import CustomComponent from './components/CustomHTML/CustomComponent';
 
 // export type SetLoginStateProp = {
 //   setIsLoggedIn : React.Dispatch<React.SetStateAction<boolean>>
@@ -106,7 +111,7 @@ function App() {
         <Users2/>
       </UserContextProvider2> */}
 
-      <DomRefs/>
+      {/* <DomRefs/>
 
       <CounterClass message='Hi Please check out my counter'/>
 
@@ -123,7 +128,16 @@ function App() {
         onClick={(item) => console.log(item)
         }
        />
-   <RandomNumber value = {10} isPos/>
+   <RandomNumber value = {10} isPos/> */}
+
+   <Toast position={'center'}/>
+<CustomButton variant='secondary' onClick={() => console.log('Clicked')}>Secondary Button</CustomButton>
+  <CustomInput placeholder = 'Enter your username' value={input} onChange={(e) => setInput(e.target.value)}/>
+    <CustomComponent name='Sahil' isLoggedIn = {true} />
+
+    <Text as ='h1' size='lg' color='primary'>Header</Text>
+    <Text as = 'p' size='md' color='secondary'> This is a paragraph and the content is large</Text>
+    <Text as = 'label' labelFor = 'someID' size='sm' color='secondary'>Label</Text>
       
       
        
